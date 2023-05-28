@@ -2,16 +2,19 @@ import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:note_tube/views/saved_notes.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import '../constants/constants.dart';
 import '../controller/controller.dart';
 import '../controller/functions.dart';
+import '../controller/gpt_controller.dart';
 import 'notes.dart';
 
 class Home extends StatelessWidget {
   Home({super.key});
   final controllers = Get.put(Controller());
+  final gptController = Get.put(ChatGptController());
   final formGlobalKey = GlobalKey<FormState>();
 
   @override
@@ -59,9 +62,12 @@ class Home extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(top: 20.0),
                     child: ElevatedButton(
-                      onPressed: () => {
+                      onPressed: () async {
+                        // print(
+                        //   await gptController.generateText("Hello how are you"),
+                        // );
                         if (formGlobalKey.currentState!.validate())
-                          Get.to(() => Notes())
+                          Get.to(() => Notes());
                       },
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
@@ -70,7 +76,21 @@ class Home extends StatelessWidget {
                       ),
                       child: text("Start notes", color: white),
                     ),
-                  )
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20.0),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Get.to(SavedNotes());
+                      },
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: kcircular,
+                        ),
+                      ),
+                      child: text("Saved Notes", color: white),
+                    ),
+                  ),
                 ],
               ),
             ),

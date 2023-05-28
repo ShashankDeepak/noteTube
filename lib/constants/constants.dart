@@ -60,6 +60,6 @@ Text text(
 const double kpadding = 20;
 BorderRadius kcircular = BorderRadius.circular(20);
 
-String youtubeUrlRegex =
+String _youtubeUrlRegex =
     r'^(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?([a-zA-Z0-9_-]{11})';
-RegExp regex = RegExp(youtubeUrlRegex);
+RegExp regex = RegExp(_youtubeUrlRegex);

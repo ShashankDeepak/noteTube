@@ -1,1 +1,1 @@
-String gptApiKey = "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";
+String gptApiKey = "3dd5c59787msh03cb04653803adbp149533jsn809126cb05fa";

@@ -6,27 +6,22 @@ import '../constants/api.dart';
 class ChatGptController extends GetxController {
   Future<String> generateText(String prompt) async {
     try {
-      Map<String, dynamic> requestBody = {
-        "model": "text-davinci-003",
-        "prompt": prompt,
-        "temperature": 0,
-        "max_tokens": 100,
+      var url = Uri.parse('https://simple-chatgpt-api.p.rapidapi.com/ask');
+
+      var headers = {
+        'content-type': 'application/json',
+        'X-RapidAPI-Key': gptApiKey,
+        'X-RapidAPI-Host': 'simple-chatgpt-api.p.rapidapi.com'
       };
 
-      var url = Uri.parse('https://api.openai.com/v1/completions');
-
-      var response = await http.post(url,
-          headers: {
-            "Content-Type": "application/json",
-            "Authorization": "Bearer $gptApiKey"
-          },
-          body: json.encode(requestBody));
+      var data = {'question': prompt};
+      var response =
+          await http.post(url, headers: headers, body: json.encode(data));
 
       if (response.statusCode == 200) {
         var responseJson = json.decode(response.body);
-        print(
-            "////////////////////////////////////////////////////////////////////////");
-        return responseJson["choices"][0]["text"];
+
+        return responseJson["answer"];
       } else {
         return "Failed to generate text: ${response.body}";
       }
