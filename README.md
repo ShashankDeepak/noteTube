@@ -29,6 +29,10 @@ NoteTube is an app that lets you take notes while watching YouTube videos. It ha
 - Share notes
 - Better User Interface
 
+## Download APK
+
+<a href = "https://drive.google.com/file/d/178NPT_rtHUJxx6hZn6x0PKwi0UuH2IhP/view?usp=share_link"> Download </a>
+
 ## Contact
 
 DM me at : 
