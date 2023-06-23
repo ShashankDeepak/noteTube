@@ -1,6 +1,6 @@
 # NoteTube
 
-NoteTube is an app that lets you take notes while watching YouTube videos. It has a unique design that displays the video on top of the screen and a text editor below it. You can save and search for your notes later, and the app also offers a chatbot powered by ChatGPT technology to provide additional help and insights. NoteTube is ideal for students, researchers, or anyone who wants to enhance their learning experience on YouTube.
+NoteTube is an app that lets you take notes while watching YouTube videos. It has a unique design that displays the video on top of the screen and a text editor below it. You can save and search for your notes later, and the app also offers a text-processing AI powered by ChatGPT technology to provide additional help and insights. NoteTube is ideal for students, researchers, or anyone who wants to enhance their learning experience on YouTube.
 
 ## ScreenShots
 
@@ -21,11 +21,11 @@ NoteTube is an app that lets you take notes while watching YouTube videos. It ha
 - Notes while watching
 - Save notes
 - Easily accessible
-- Chatbot powered by ChatGPT technology.
+- Text processing AI powered by ChatGPT technology.
 
 ## Future
 
-- Online notes storage that can be accessed any time
+- Online notes storage that can be accessed at any time
 - Share notes
 - Better User Interface
 
